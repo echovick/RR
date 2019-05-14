@@ -30,21 +30,6 @@
                     </div>
                     <div class="auth__auth">
                         <h1 class="auth__title">Sign Up for free</h1>
-                        <?php
-                            if(isset($_GET['u_e_exists'])){
-                                echo "<div class='alert alert-success alert-dismissible' style='font-size:12px;'>
-                                <a href='../signup/' class='close' data-dismiss='alert' style='font-size:20px;'>&times;</a>
-                                <strong>Error!</strong> Username Or Email Already Exits
-                                </div>";
-                            }
-
-                            if(isset($_GET['mismatch'])){
-                                echo "<div class='alert alert-success alert-dismissible' style='font-size:12px;'>
-                                <a href='../signup/' class='close' data-dismiss='alert' style='font-size:20px;'>&times;</a>
-                                <strong>Error!</strong> Password Mismatch
-                                </div>";
-                            }
-                        ?>
                         <form class="" role="presentation" id="login-form" action="../includes/reg_process.php" method="post">                                            
                             <label>Username</label>
                             <input class="" placeholder="Username" required="required" name="username" id="LoginForm_username" type="text" minlength="3" maxlength="10"/>                        

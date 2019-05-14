@@ -27,9 +27,17 @@
                 <div class="auth__inner"  style="margin-top:-60px;">
                     <div class="auth__media">
                         <img src="../images/icon/flat_login.png">
-                    </div>
+                    </div>                
                     <div class="auth__auth">
                         <h1 class="auth__title">Login Member Panel</h1>
+                        <?php
+                            if(isset($_GET['wrongpass'])){
+                                echo "<div class='alert alert-success alert-dismissible' style='font-size:12px;'>
+                                <a href='../login/' class='close' data-dismiss='alert' style='font-size:20px;'>&times;</a>
+                                <strong>Error!</strong> Wrong Username or password
+                                </div>";
+                            }
+                        ?>    
                         <form class="" role="presentation" id="login-form" action="../includes/login_process.php" method="post">                                            
                             <label>Username</label>
                             <input class="" placeholder="Username" required="required" name="username" id="LoginForm_username" type="text" minlength="3" maxlength="10"/>                        
