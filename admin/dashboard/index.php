@@ -169,7 +169,7 @@
 											if(empty($id)){
 												$tid = date("dm").""."0";
 											}else{
-												$tid = date("dm")."".$id;
+												$tid = date("dm")."".$id+1;
 											}
 										}										
 									?>
@@ -391,7 +391,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; RewardsReturn.com.ng</span>
+            <span>Copyright &copy; RewardsReturn.com</span>
           </div>
         </div>
       </footer>
