@@ -2,7 +2,26 @@
 <?php require_once("../includes/connection.php"); ?>
 <?php require_once("../includes/functions.php"); ?>
 <?php confirm_logged_in(); ?>
-<?php confirm_time_out(); ?>
+<?php
+    
+    if (isset($_POST['submit'])){
+      $id = $_GET['id'];
+      $sql = "DELETE FROM user_details WHERE id = '{$id}'";
+      $result = mysqli_query($connection,$sql);
+      if($result){
+        $_SESSION["message"] = 
+        '
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success:</strong> Delete successful
+        </div>
+        ';
+        header("Location: users.php");
+        exit;
+      }
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,12 +67,12 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="./">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item active">
         <a class="nav-link" href="users.php">
           <i class="fas fa-fw fa-user"></i>
           <span>Registered Users</span></a>
@@ -140,10 +159,6 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-          </div>
 
           <?php
             if(isset($_SESSION["message"])){
@@ -151,189 +166,10 @@
             }
 						unset($_SESSION["message"]);
           ?>
-
-          <!-- 2nd Content Row -->
-          <div class="row">
-
-            <!-- Merge Users -->
-            <div class="col-md-5">
-              <div class="card shadow mb-4 p-0">
-                <!-- Card Header -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Merge Users</h6>
-                </div>
-                <!-- Card Header End -->
-                <!-- Card Body -->
-                <div class="card-body p-1">
-									<?php
-										$result = get_last_transaction();
-										if($result){
-											while ($row = mysqli_fetch_row($result)) {
-												$id = $row[0];
-											}
-											if(empty($id)){
-												$tid = date("dm").""."0";
-											}else{
-												$tid = date("dm")."".$id+1;
-											}
-										}										
-									?>
-                    <form class="user" action="../includes/profile_process.php" method="POST">
-                        <div class="form-group">
-                            <input type="text" class="form-control bg-transparent" name="transacID" value="<?php 	echo $tid; ?>" readonly>
-                        </div>
-
-                        <div class="form-group row">
-                          <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control " name="pname" placeholder="Payer Name" minlength = "3" required>
-                          </div>
-                          <div class="col-sm-6">
-                            <input type="text" class="form-control " name="rname" placeholder="Recipient Name" minlength = "3" required>
-                          </div>
-                        </div>
-                        
-                        <div class="form-group row">
-                          <div class="col-sm-6 mb-3 mb-sm-0">
-                            <div class="form-control border-0">Merge Date</div> 
-                            <input type="date" class="form-control" name="date" required>
-                          </div>
-                          <div class="col-sm-6">
-                              <div class="form-control border-0">Status</div> 
-                              <input type="text" class="form-control  bg-transparent" name="status" value="pending" readonly>
-                          </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                              <div class="form-control border-0">Amount</div> 
-                              <select type="" class="form-control " name="amount" >
-                                <option>2000</option>
-                                <option>4000</option>
-                                <option>5000</option>
-                                <option>10000</option>
-                                <option>15000</option>
-                                <option>25000</option>
-                                <option>30000</option>
-                                <option>35000</option>
-                                <option>40000</option>
-                                <option>45000</option>
-                                <option>50000</option>
-                              </select>
-                            </div>
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                              <div class="form-control border-0">Recieve Date</div> 
-                              <input type="date" class="form-control " name="recieve_date" required>
-                            </div>
-                          </div>
-
-                        <input type="submit" value="Submit" name = "merge" class="btn btn-primary btn-user btn-block">
-                      </form>
-                </div>
-                <!-- Card Body End -->
-              </div>
-            </div>
-            <!-- Merge Users End -->
-
-            <!-- Pay Request -->
-            <div class="col-md-4">
-              <div class="card shadow mb-4 p-0">
-
-                <!-- Card Header -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary small">Pay Requests</h6>
-                </div>
-
-                <!-- Card Body -->
-                <div class="card-body p-1">
-                  
-                    <div class="table-responsive">
-                        <table class="table table-bordered small" id="" width="100%" cellspacing="0">
-                          <thead>
-                            <tr>
-                              <th>Username</th>
-                              <th>Amount</th>
-                              <th>Date</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <?php 
-                               $result= get_pay_requests();
-                              if($result){
-                                while ($row = mysqli_fetch_array($result)) {
-                                  $username = $row[3];
-                                  $amount = $row[2];
-                                  $date = $row[4];
-                            ?>
-                            <tr>
-                              <td> <?php echo $username; ?> </td>
-                              <td> <?php echo $amount; ?> </td>
-                              <td> <?php echo $date; ?> </td>
-                            </tr>
-                            <?php
-                                }
-                              }
-                            ?>
-                          </tbody>
-                        </table>
-                      </div>
-
-                </div>
-              </div>
-              
-            </div>
-            <!-- Pay Request End -->
-
-
-            <!-- Elligible Recipient -->
-            <div class="col-md-3">
-                <div class="card shadow mb-4 p-0">
-  
-                  <!-- Card Header  -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary small">Elligible Recipient</h6>
-                  </div>
-  
-                  <!-- Card Body -->
-                  <div class="card-body p-1">
-                      <div class="table-responsive">
-                          <table class="table table-bordered small" id="" width="100%" cellspacing="0">
-                            <thead>
-                              <tr>
-                                <th>Username</th>
-                                <th>Amount</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <?php 
-                                $result= get_elligible_recipients();
-                                if($result){
-                                  while ($row = mysqli_fetch_array($result)) {
-                                    $username = $row[3];
-                                    $amount = $row[2];
-                              ?>
-                              <tr>
-                                <td>  <?php echo $username; ?> </td>
-                                <td>  <?php echo $amount; ?> </td>
-                              </tr>
-                              <?php
-                                  }
-                                }
-                              ?>
-                            </tbody>
-                          </table>
-                        </div>
-                  </div>
-                </div>
-                
-              </div>
-              <!-- Elligible Recipient End -->
-          </div>
-          <!-- 2nd Content Row End -->
-
           <!-- All Transaction Table -->
           <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary small">All Transactions</h6>
+                <h6 class="m-0 font-weight-bold text-primary small">All Users</h6>
               </div>
               <div class="card-body p-1">
                 <div class="table-responsive">
@@ -341,38 +177,34 @@
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>transac_id</th>
-                        <th>Payer</th>
-                        <th>Recipient</th>
-                        <th>Amount</th>
-                        <th>Merge date</th>
-                        <th>Recieve Date</th>
-                        <th>Status</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>control</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php 
-                        $result= get_all_transactions();
+                        $query = "SELECT * FROM user_details";
+                        $result = mysqli_query($connection,$query);
+                        confirm_query($result);
                         if($result){
                           while ($row = mysqli_fetch_array($result)) {
                             $id = $row[0];
-                            $transac_id = $row[1];
-                            $payer = $row[2];
-                            $recipient = $row[3];
-                            $amount = $row[4];
-                            $merge_date = $row[6];
-                            $recieve_date = $row[7];
-                            $status = $row[5]; 
+                            $username = $row[1];
+                            $email = $row[3];
+                            $phone = $row[4];
                       ?>
                       <tr>
                         <td> <?php echo $id; ?> </td>
-                        <td> <?php echo $transac_id ?> </td>
-                        <td> <?php echo $payer ?> </td>
-                        <td> <?php echo $recipient ?> </td>
-                        <td> <?php echo $amount ?> </td>
-                        <td> <?php echo $merge_date ?> </td>
-                        <td> <?php echo $recieve_date ?> </td>
-                        <td> <?php echo $status ?> </td>
+                        <td> <?php echo $username ?> </td>
+                        <td> <?php echo $email ?> </td>
+                        <td> <?php echo $phone ?> </td>
+                        <td>
+                          <form action="users.php?id=<?php echo $id;?>" method="post">
+                            <button class="btn btn-sm btn-danger" type="submit" name="submit"> Delete </button>
+                          </form>
+                        </td>
                       </tr>
                       <?php
                           }

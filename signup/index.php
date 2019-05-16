@@ -48,7 +48,7 @@
                                 <option value="notsure">Not Sure</option>
                             </select>
                             <label>Account Name</label>
-                            <input class="" placeholder="John Doe Chukwuma" required="required" name="accntname" id="LoginForm_username" type="text" minlength="3" maxlength="20"/>
+                            <input class="" placeholder="John Doe Chukwuma" required="required" name="accntname" id="LoginForm_username" type="text" minlength="3" maxlength="50"/>
                             <label>Password</label>
                             <input autocomplete="off" class="" placeholder="Password" required="required" name="password" id="LoginForm_password" type="password" minlength="5" maxlength="10"/>
                             <label>Retype Password</label>
