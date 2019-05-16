@@ -4,7 +4,7 @@
   <head>
     <meta class="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Sitename - Peer-To-Peer Donation Platform</title><meta name="description" content="Sitename " />
+    <title>RewardsReturn - Peer-To-Peer Donation Platform</title><meta name="description" content="RewardsReturn " />
     <link rel='stylesheet' href='themes/front/css/style.min.css' />
     <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon/apple-touch-icon.png" />
@@ -21,7 +21,7 @@
       <nav class="nav__mobile"></nav>
       <div class="container">
         <div class="navbar__inner">
-          <a href="index.html" class="navbar__logo"><i class="fa fa-heartbeat"></i> Sitename  <small>(unlimited)</small></a>
+          <a href="index.html" class="navbar__logo"><i class="fa fa-heartbeat"></i>RewardsReturn<small>(unlimited)</small></a>
           <nav class="navbar__menu">
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -47,7 +47,7 @@
             <div class="hero__content">
               <div class="hero__content__inner" id='navConverter'>
                 <h1 class="hero__title">A Smart &amp; Systematic Peer-To-Peer Donation Platform.</h1>
-                <p class="hero__text" style="text-align: center;">Sitename  is a free and easy to use member to member donation platform. All donations are between registered members. it is a very simple platform if you are looking to increase your profits every now and then, click any of the link below to get started</p>
+                <p class="hero__text" style="text-align: center;">RewardsReturn  is a free and easy to use member to member donation platform. All donations are between registered members. it is a very simple platform if you are looking to increase your profits every now and then, click any of the link below to get started</p>
                 <a href="signup/" class="button button__accent">Sign Up</a>
                 <a href="login/" class="button hero__button">Sign in</a>
               </div>
@@ -66,7 +66,7 @@
     <a name="learnmore"></a>
     <div class="steps landing__section">
       <div class="container">
-        <h2>How Sitename Works?</h2>
+        <h2>How RewardsReturn Works?</h2>
         <p>Its simple and straight forward, in 3 easy steps.</p>
       </div>
       <div class="container">
@@ -107,7 +107,7 @@
             <h2 class="expanded__title">24/7 Customer Care Services</h2>
             <p class="expanded__text">We have a 24hours, round the clock customer service personnels to help you with any complains or problems you might have or come across while using our service.
               You can easily contact us by sending us a message through a provided medium on our contact page.
-              Or Get in touch with us directly: support@Sitename.com</p>
+              Or Get in touch with us directly: support@RewardsReturn.com</p>
           </div>
         </div>
       </div>
@@ -121,17 +121,13 @@
           </div>
           <div class="expanded__content">
             <h2 class="expanded__title">Available Packages</h2>
-            <p class="expanded__text">Request and pay any of the following packages to get 50% interest in return:
+            <p class="expanded__text">Request and pay any of the following packages to get interest in return:
               <hr>
-              - Invest N2000 to get N3000 in return (Interest-N1000)
+              - Invest N12000 to get N36000 in return (Interest-N24000)
               <br>
-              - Invest N4000 to get N6000 in return (Interest-N2000) 
+              - Invest N24000 to get N72000 in return (Interest-48000) 
               <br>
-              - Invest N6000 to get N9000 in return (Interest-N3000) 
-              <br>
-              - Invest N8000 to get N12000 in return (Interest-N4000) 
-              <br>
-              - Invest N10000 to get N15000 in return (Interest-N5000)
+              - Invest N36000 to get N108000 in return (Interest-N72000) 
               <hr>
             </p>
           </div>
@@ -168,7 +164,7 @@
     <div class="footer footer--dark">
       <div class="container">
         <div class="footer__inner">
-          <a href="#" class="footer__textLogo"><i class="fa fa-heartbeat"></i> Sitename</a>
+          <a href="#" class="footer__textLogo"><i class="fa fa-heartbeat"></i> RewardsReturn</a>
           <div class="footer__data">
             <div class="footer__data__item">
             </div>

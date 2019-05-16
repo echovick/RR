@@ -5,7 +5,7 @@
             <nav class="nav__mobile"></nav>
             <div class="container">
                 <div class="navbar__inner">
-                    <a href="index.html" class="navbar__logo">Sitename <small>(unlimited)</small></a>
+                    <a href="index.html" class="navbar__logo">RewardsReturn <small>(unlimited)</small></a>
                     <nav class="navbar__menu">
                         <ul>
                             <li><a href="../">Home</a></li>
@@ -52,7 +52,7 @@
                     <li>Members caught spamming or otherwise causing harm to our program will have their accounts terminated, and maybe prosecuted for their actions. We will investigate all allegations before taking action.</li>
                     <li>All transactions are final. No refunds.</li>
                     <li>You understand that all donations will be made to you from our payment processors, and that any problems you have concerning such matters should be taken up with your respective merchant account provider.</li>
-                    <li>You agree to accept email updates regarding Sitename  program. We will never inundate you with emails or spam.</li>
+                    <li>You agree to accept email updates regarding RewardsReturn  program. We will never inundate you with emails or spam.</li>
                     </ul>
                     <p>Report spam and other abuse via the contact form.<br>
                     Please include the entire spam email with headers.</p>
@@ -64,7 +64,7 @@
         <div class="footer footer--dark">
             <div class="container">
                 <div class="footer__inner">
-                    <a href="index.html" class="footer__textLogo">Sitename.</a>
+                    <a href="index.html" class="footer__textLogo">RewardsReturn.</a>
                     <div class="footer__data">
                         <div class="footer__data__item">
                         </div>

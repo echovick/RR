@@ -5,7 +5,7 @@
             <nav class="nav__mobile"></nav>
             <div class="container">
                 <div class="navbar__inner">
-                    <a href="/" class="navbar__logo">Sitename <small>(unlimited)</small></a>
+                    <a href="/" class="navbar__logo">RewardsReturn <small>(unlimited)</small></a>
                     <nav class="navbar__menu">
                         <ul>
                             <li><a href="../">Home</a></li>
@@ -41,8 +41,8 @@
                 <div class="text-container">
                     <h2>General</h2>
     
-                    <p><strong>What is sitename ?</strong><br>
-                    sitename  is a member-to-member, direct donation platform, for members to help each other members in a systematic way. By using this platform, member can give and receive donations from each other.
+                    <p><strong>What is RewardsReturn ?</strong><br>
+                    RewardsReturn  is a member-to-member, direct donation platform, for members to help each other members in a systematic way. By using this platform, member can give and receive donations from each other.
                     </p>	
     
                     <p><strong>Which countries can join this program?</strong><br>
@@ -76,7 +76,7 @@
                     This is optional. Members feel more confident if they can contact you to ask about the program and donation process.
                     </p>
     
-                    <p><strong>I did not receive any email from sitename after registration.</strong><br>
+                    <p><strong>I did not receive any email from RewardsReturn after registration.</strong><br>
                     It could be in your Spam/Junk box. And it is also possible the email address is not valid. You can try 'Forgot Password' in login page.</p>
   
                     <h2>Bank &amp; Payment Methods</h2>
@@ -88,16 +88,16 @@
                     Every member can add up to 5 bank accounts.</p>
                         
                     <p><strong>Can I use the same bank account for multiple account?</strong><br>
-                    Yes. If you have more than 1 sitename account or you help to manage your friend/family account, you can use the same bank account information for all of the accounts.</p>
+                    Yes. If you have more than 1 RewardsReturn account or you help to manage your friend/family account, you can use the same bank account information for all of the accounts.</p>
                         
                     <p><strong>Can I edit, add, remove payment method?</strong><br>
                     Yes you can do so at anytime. But please make sure you have at least 1 payment method available, or else your donator wont be able to donate to you.</p>
     
                     <h2>Miscellaneous</h2>
     
-                    <p><strong>Hashtag for sitename?</strong><br>
-                    The official hashtag for sitename  is <b>#sitename</b></p>
-                    <p>This hashtag is used to gather all marketing effort and materials to be as reference for every member. It is encouraged to all members to include #sitename in all marketing.</p>
+                    <p><strong>Hashtag for RewardsReturn?</strong><br>
+                    The official hashtag for RewardsReturn  is <b>#RewardsReturn</b></p>
+                    <p>This hashtag is used to gather all marketing effort and materials to be as reference for every member. It is encouraged to all members to include #RewardsReturn in all marketing.</p>
     
                     <p><strong>Is refund available?</strong><br>
                     No refund is available after donation is made. Donation is from a member to another member, it is not managed or held by the system or 3rd party.</p>
@@ -113,7 +113,7 @@
         <div class="footer footer--dark">
             <div class="container">
                 <div class="footer__inner">
-                    <a href="/" class="footer__textLogo">Sitename.</a>
+                    <a href="/" class="footer__textLogo">RewardsReturn.</a>
                     <div class="footer__data">
                         <div class="footer__data__item">
                         </div>

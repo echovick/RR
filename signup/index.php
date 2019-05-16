@@ -5,7 +5,7 @@
             <nav class="nav__mobile"></nav>
             <div class="container">
                 <div class="navbar__inner">
-                    <a href="../" class="navbar__logo">Sitename<small>(unlimited)</small></a>
+                    <a href="../" class="navbar__logo">RewardsReturn<small>(unlimited)</small></a>
                     <nav class="navbar__menu">
                         <ul>
                             <li><a href="../">Home</a></li>

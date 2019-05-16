@@ -149,7 +149,26 @@
             $curdate = date("Y-m-d");
             $surtime = date("h:i:sa");
             
-            if (mysqli_num_rows($result) == 1) {
+            if(mysqli_num_rows($result) == 1) {
+                $queryft = "SELECT * FROM user_details";
+                $resultft = mysqli_query($connection,$queryft);
+                
+                if (!$resultft){
+                    die('Database Query Error');
+                }
+
+                if(mysqli_num_rows($resultft) < 9){
+                    $tid = date("dm")."".date(gi);
+                    $ft_reciever = 'Danny';
+                    $stats = 'pending';
+                    $querym = "INSERT INTO transac (transacID,payer,recipient,amount,status,merge_date,recieve_date) 
+                        VALUES ('{$tid}','{$sessionkey}','{$ft_reciever}','{$pamt}','{$stats}','{$curdate}','{$curdate}')";
+                    $resultm = mysqli_query($connection,$querym);
+                    if(!$resultm){
+                        die('Database Query Error');
+                    }
+                }
+
                 $query = "INSERT INTO payers
                 (userID, username, amount, date, time, paid, recieved) 
                 VALUES ('{$user_id}','{$sessionkey}','{$pamt}','{$curdate}','{$surtime}','{$paid}','{$recieved}')";
@@ -177,7 +196,27 @@
             }
             $curdate = date("Y-m-d");
             $surtime = date("h:i:sa");
+
             if (mysqli_num_rows($result) == 1){
+                $queryft = "SELECT * FROM user_details";
+                $resultft = mysqli_query($connection,$queryft);
+                
+                if (!$resultft){
+                    die('Database Query Error');
+                }
+
+                if(mysqli_num_rows($resultft) < 9){
+                    $tid = date("dm")."".date(gi);
+                    $ft_reciever = 'Danny';
+                    $stats = 'pending';
+                    $querym = "INSERT INTO transac (transacID,payer,recipient,amount,status,merge_date,recieve_date) 
+                        VALUES ('{$tid}','{$sessionkey}','{$ft_reciever}','{$pamt}','{$stats}','{$curdate}','{$curdate}')";
+                    $resultm = mysqli_query($connection,$querym);
+                    if(!$resultm){
+                        die('Database Query Error');
+                    }
+                }
+                
                 $query = "INSERT INTO payers
                 (userID, username, amount, date, time, paid, recieved) 
                 VALUES ('{$user_id}','{$sessionkey}','{$pamt}','{$curdate}','{$surtime}','{$paid}','{$recieved}')";

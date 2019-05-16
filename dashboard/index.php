@@ -329,10 +329,20 @@
                   <h6 class="m-0 font-weight-bold text-primary">Request To Pay</h6>
                 </div>
                 <div class="card-body">
-                  <p>Click the button below to make a payment request. Your request will be confirmed and you will recieve a merging info in less than 48hrs to wchich you will be required to pay. You can request Among the following packages: N12,000, N24,000 And N36000</p>
+                  <p>Click the button below to make a payment request. Your request will be confirmed and you will recieve a merging info in less than 48hrs to wchich you will be required to pay. You can request Among the following packages: N12,000, N24,000 And N36,000</p>
                   <form class="form-inline" method="post" action="../includes/profile_process.php">
-                    <input type="text" minlength="4" class="form-control" name="amt" placeholder="Package Amount" required>
-                    <button type="submit" name="requestpay" class="btn btn-sm btn-primary">Request to Pay</a>
+                    <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <span>Package Amount</span> 
+                        <select type="" class="form-control " name="amt" >
+                          <option>12000</option>
+                          <option>24000</option>
+                          <option>36000</option>
+                        </select>
+                      </div>
+                      <button type="submit" name="requestpay" class="btn btn-sm btn-primary">Request to Pay</a>
+                    </div>
+                    <!--<input type="text" minlength="4" class="form-control" name="amt" placeholder="Package Amount" required>-->
                   </form>
                 </div>
                 <?php

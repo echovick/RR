@@ -167,9 +167,9 @@
 												$id = $row[0];
 											}
 											if(empty($id)){
-												$tid = date("dm").""."0";
+                        $tid = date("dm").""."0";
 											}else{
-												$tid = date("dm")."".$id;
+                        $tid = date("dm")."".$id;
 											}
 										}										
 									?>

@@ -5,7 +5,7 @@
             <nav class="nav__mobile"></nav>
             <div class="container">
                 <div class="navbar__inner">
-                    <a href="../" class="navbar__logo">sitename  <small>(unlimited)</small></a>
+                    <a href="../" class="navbar__logo">RewardsReturn  <small>(unlimited)</small></a>
                     <nav class="navbar__menu">
                         <ul>
                             <li><a href="../">Home</a></li>
@@ -55,7 +55,7 @@
         <div class="footer footer--dark">
             <div class="container">
                 <div class="footer__inner">
-                    <a href="../" class="footer__textLogo">Sitename.</a>
+                    <a href="../" class="footer__textLogo">RewardsReturn.</a>
                     <div class="footer__data">
                         <div class="footer__data__item">
                         </div>

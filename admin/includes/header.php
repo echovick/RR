@@ -22,7 +22,7 @@ $currentURL = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . $_SE
     <meta class="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <script type="text/javascript" src="assets/861c30a6/jquery.min.js"></script>
-        <title>sitename  - Login</title><meta name="description" content="sitename " />
+        <title>RewardsReturn</title><meta name="description" content="sitename " />
         <link rel='stylesheet' href='../themes/front/css/style.min.css' />
         <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
         <link rel="apple-touch-icon" href="../images/apple-touch-icon/apple-touch-icon.png" />
